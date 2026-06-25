@@ -1,0 +1,1233 @@
+[
+  {
+    "city": "New York",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "metroArea": "New York-Newark-Jersey City",
+    "fipsCode": "35620",
+    "cbsaCode": "35620",
+    "zipCodes": [
+      "10001",
+      "10002",
+      "10003"
+    ],
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "blsAreaCode": "35620",
+    "county": "New York"
+  },
+  {
+    "city": "Los Angeles",
+    "state": "California",
+    "stateAbbr": "CA",
+    "metroArea": "Los Angeles-Long Beach-Anaheim",
+    "fipsCode": "31080",
+    "cbsaCode": "31080",
+    "zipCodes": [
+      "90001",
+      "90012",
+      "90015"
+    ],
+    "latitude": 34.0522,
+    "longitude": -118.2437,
+    "blsAreaCode": "31080",
+    "county": "Los Angeles"
+  },
+  {
+    "city": "Chicago",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "metroArea": "Chicago-Naperville-Elgin",
+    "fipsCode": "16980",
+    "cbsaCode": "16980",
+    "zipCodes": [
+      "60601",
+      "60602",
+      "60603"
+    ],
+    "latitude": 41.8781,
+    "longitude": -87.6298,
+    "blsAreaCode": "16980",
+    "county": "Cook"
+  },
+  {
+    "city": "Dallas",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "metroArea": "Dallas-Fort Worth-Arlington",
+    "fipsCode": "19100",
+    "cbsaCode": "19100",
+    "zipCodes": [
+      "75201",
+      "75202",
+      "75204"
+    ],
+    "latitude": 32.7767,
+    "longitude": -96.797,
+    "blsAreaCode": "19100",
+    "county": "Dallas"
+  },
+  {
+    "city": "Houston",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "metroArea": "Houston-The Woodlands-Sugar Land",
+    "fipsCode": "26420",
+    "cbsaCode": "26420",
+    "zipCodes": [
+      "77001",
+      "77002",
+      "77003"
+    ],
+    "latitude": 29.7604,
+    "longitude": -95.3698,
+    "blsAreaCode": "26420",
+    "county": "Harris"
+  },
+  {
+    "city": "Phoenix",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "metroArea": "Phoenix-Mesa-Chandler",
+    "fipsCode": "38060",
+    "cbsaCode": "38060",
+    "zipCodes": [
+      "85001",
+      "85003",
+      "85004"
+    ],
+    "latitude": 33.4484,
+    "longitude": -112.074,
+    "blsAreaCode": "38060",
+    "county": "Maricopa"
+  },
+  {
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "metroArea": "Philadelphia-Camden-Wilmington",
+    "fipsCode": "37980",
+    "cbsaCode": "37980",
+    "zipCodes": [
+      "19101",
+      "19102",
+      "19103"
+    ],
+    "latitude": 39.9526,
+    "longitude": -75.1652,
+    "blsAreaCode": "37980",
+    "county": "Philadelphia"
+  },
+  {
+    "city": "San Antonio",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "metroArea": "San Antonio-New Braunfels",
+    "fipsCode": "41700",
+    "cbsaCode": "41700",
+    "zipCodes": [
+      "78201",
+      "78202",
+      "78204"
+    ],
+    "latitude": 29.4241,
+    "longitude": -98.4936,
+    "blsAreaCode": "41700",
+    "county": "Bexar"
+  },
+  {
+    "city": "San Diego",
+    "state": "California",
+    "stateAbbr": "CA",
+    "metroArea": "San Diego-Chula Vista-Carlsbad",
+    "fipsCode": "41740",
+    "cbsaCode": "41740",
+    "zipCodes": [
+      "92101",
+      "92102",
+      "92103"
+    ],
+    "latitude": 32.7157,
+    "longitude": -117.1611,
+    "blsAreaCode": "41740",
+    "county": "San Diego"
+  },
+  {
+    "city": "Austin",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "metroArea": "Austin-Round Rock-Georgetown",
+    "fipsCode": "12420",
+    "cbsaCode": "12420",
+    "zipCodes": [
+      "78701",
+      "78702",
+      "78703"
+    ],
+    "latitude": 30.2672,
+    "longitude": -97.7431,
+    "blsAreaCode": "12420",
+    "county": "Travis"
+  },
+  {
+    "city": "Jacksonville",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "metroArea": "Jacksonville",
+    "fipsCode": "27260",
+    "cbsaCode": "27260",
+    "zipCodes": [
+      "32099",
+      "32201",
+      "32202"
+    ],
+    "latitude": 30.3322,
+    "longitude": -81.6557,
+    "blsAreaCode": "27260",
+    "county": "Duval"
+  },
+  {
+    "city": "Columbus",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "metroArea": "Columbus",
+    "fipsCode": "18140",
+    "cbsaCode": "18140",
+    "zipCodes": [
+      "43085",
+      "43201",
+      "43202"
+    ],
+    "latitude": 39.9612,
+    "longitude": -82.9988,
+    "blsAreaCode": "18140",
+    "county": "Franklin"
+  },
+  {
+    "city": "Charlotte",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "metroArea": "Charlotte-Concord-Gastonia",
+    "fipsCode": "16740",
+    "cbsaCode": "16740",
+    "zipCodes": [
+      "28201",
+      "28202",
+      "28203"
+    ],
+    "latitude": 35.2271,
+    "longitude": -80.8431,
+    "blsAreaCode": "16740",
+    "county": "Mecklenburg"
+  },
+  {
+    "city": "Indianapolis",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "metroArea": "Indianapolis-Carmel-Anderson",
+    "fipsCode": "26900",
+    "cbsaCode": "26900",
+    "zipCodes": [
+      "46201",
+      "46202",
+      "46204"
+    ],
+    "latitude": 39.7684,
+    "longitude": -86.1581,
+    "blsAreaCode": "26900",
+    "county": "Marion"
+  },
+  {
+    "city": "San Francisco",
+    "state": "California",
+    "stateAbbr": "CA",
+    "metroArea": "San Francisco-Oakland-Berkeley",
+    "fipsCode": "41860",
+    "cbsaCode": "41860",
+    "zipCodes": [
+      "94102",
+      "94103",
+      "94104"
+    ],
+    "latitude": 37.7749,
+    "longitude": -122.4194,
+    "blsAreaCode": "41860",
+    "county": "San Francisco"
+  },
+  {
+    "city": "Seattle",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "metroArea": "Seattle-Tacoma-Bellevue",
+    "fipsCode": "42660",
+    "cbsaCode": "42660",
+    "zipCodes": [
+      "98101",
+      "98102",
+      "98103"
+    ],
+    "latitude": 47.6062,
+    "longitude": -122.3321,
+    "blsAreaCode": "42660",
+    "county": "King"
+  },
+  {
+    "city": "Denver",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "metroArea": "Denver-Aurora-Lakewood",
+    "fipsCode": "19740",
+    "cbsaCode": "19740",
+    "zipCodes": [
+      "80201",
+      "80202",
+      "80203"
+    ],
+    "latitude": 39.7392,
+    "longitude": -104.9903,
+    "blsAreaCode": "19740",
+    "county": "Denver"
+  },
+  {
+    "city": "Nashville",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "metroArea": "Nashville-Davidson-Murfreesboro-Franklin",
+    "fipsCode": "34980",
+    "cbsaCode": "34980",
+    "zipCodes": [
+      "37201",
+      "37203",
+      "37204"
+    ],
+    "latitude": 36.1627,
+    "longitude": -86.7816,
+    "blsAreaCode": "34980",
+    "county": "Davidson"
+  },
+  {
+    "city": "Oklahoma City",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "metroArea": "Oklahoma City",
+    "fipsCode": "36420",
+    "cbsaCode": "36420",
+    "zipCodes": [
+      "73101",
+      "73102",
+      "73103"
+    ],
+    "latitude": 35.4676,
+    "longitude": -97.5164,
+    "blsAreaCode": "36420",
+    "county": "Oklahoma"
+  },
+  {
+    "city": "Portland",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "metroArea": "Portland-Vancouver-Hillsboro",
+    "fipsCode": "38900",
+    "cbsaCode": "38900",
+    "zipCodes": [
+      "97201",
+      "97202",
+      "97203"
+    ],
+    "latitude": 45.5152,
+    "longitude": -122.6784,
+    "blsAreaCode": "38900",
+    "county": "Multnomah"
+  },
+  {
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "metroArea": "Las Vegas-Henderson-Paradise",
+    "fipsCode": "29820",
+    "cbsaCode": "29820",
+    "zipCodes": [
+      "89101",
+      "89102",
+      "89103"
+    ],
+    "latitude": 36.1699,
+    "longitude": -115.1398,
+    "blsAreaCode": "29820",
+    "county": "Clark"
+  },
+  {
+    "city": "Memphis",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "metroArea": "Memphis",
+    "fipsCode": "32820",
+    "cbsaCode": "32820",
+    "zipCodes": [
+      "38101",
+      "38103",
+      "38104"
+    ],
+    "latitude": 35.1495,
+    "longitude": -90.049,
+    "blsAreaCode": "32820",
+    "county": "Shelby"
+  },
+  {
+    "city": "Louisville",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "metroArea": "Louisville/Jefferson County",
+    "fipsCode": "31140",
+    "cbsaCode": "31140",
+    "zipCodes": [
+      "40201",
+      "40202",
+      "40203"
+    ],
+    "latitude": 38.2527,
+    "longitude": -85.7585,
+    "blsAreaCode": "31140",
+    "county": "Jefferson"
+  },
+  {
+    "city": "Baltimore",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "metroArea": "Baltimore-Columbia-Towson",
+    "fipsCode": "12580",
+    "cbsaCode": "12580",
+    "zipCodes": [
+      "21201",
+      "21202",
+      "21205"
+    ],
+    "latitude": 39.2904,
+    "longitude": -76.6122,
+    "blsAreaCode": "12580",
+    "county": "Baltimore City"
+  },
+  {
+    "city": "Milwaukee",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "metroArea": "Milwaukee-Waukesha",
+    "fipsCode": "33340",
+    "cbsaCode": "33340",
+    "zipCodes": [
+      "53201",
+      "53202",
+      "53203"
+    ],
+    "latitude": 43.0389,
+    "longitude": -87.9065,
+    "blsAreaCode": "33340",
+    "county": "Milwaukee"
+  },
+  {
+    "city": "Albuquerque",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "metroArea": "Albuquerque",
+    "fipsCode": "10740",
+    "cbsaCode": "10740",
+    "zipCodes": [
+      "87101",
+      "87102",
+      "87104"
+    ],
+    "latitude": 35.0844,
+    "longitude": -106.6504,
+    "blsAreaCode": "10740",
+    "county": "Bernalillo"
+  },
+  {
+    "city": "Tucson",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "metroArea": "Tucson",
+    "fipsCode": "46060",
+    "cbsaCode": "46060",
+    "zipCodes": [
+      "85701",
+      "85702",
+      "85705"
+    ],
+    "latitude": 32.2226,
+    "longitude": -110.9747,
+    "blsAreaCode": "46060",
+    "county": "Pima"
+  },
+  {
+    "city": "Raleigh",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "metroArea": "Raleigh-Cary",
+    "fipsCode": "39580",
+    "cbsaCode": "39580",
+    "zipCodes": [
+      "27601",
+      "27603",
+      "27604"
+    ],
+    "latitude": 35.7796,
+    "longitude": -78.6382,
+    "blsAreaCode": "39580",
+    "county": "Wake"
+  },
+  {
+    "city": "Miami",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "metroArea": "Miami-Fort Lauderdale-Pompano Beach",
+    "fipsCode": "33100",
+    "cbsaCode": "33100",
+    "zipCodes": [
+      "33101",
+      "33109",
+      "33125"
+    ],
+    "latitude": 25.7617,
+    "longitude": -80.1918,
+    "blsAreaCode": "33100",
+    "county": "Miami-Dade"
+  },
+  {
+    "city": "Tampa",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "metroArea": "Tampa-St. Petersburg-Clearwater",
+    "fipsCode": "45300",
+    "cbsaCode": "45300",
+    "zipCodes": [
+      "33601",
+      "33602",
+      "33603"
+    ],
+    "latitude": 27.9506,
+    "longitude": -82.4572,
+    "blsAreaCode": "45300",
+    "county": "Hillsborough"
+  },
+  {
+    "city": "Orlando",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "metroArea": "Orlando-Kissimmee-Sanford",
+    "fipsCode": "36740",
+    "cbsaCode": "36740",
+    "zipCodes": [
+      "32801",
+      "32803",
+      "32806"
+    ],
+    "latitude": 28.5383,
+    "longitude": -81.3792,
+    "blsAreaCode": "36740",
+    "county": "Orange"
+  },
+  {
+    "city": "Atlanta",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "metroArea": "Atlanta-Sandy Springs-Alpharetta",
+    "fipsCode": "12060",
+    "cbsaCode": "12060",
+    "zipCodes": [
+      "30301",
+      "30303",
+      "30305"
+    ],
+    "latitude": 33.749,
+    "longitude": -84.388,
+    "blsAreaCode": "12060",
+    "county": "Fulton"
+  },
+  {
+    "city": "Minneapolis",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "metroArea": "Minneapolis-St. Paul-Bloomington",
+    "fipsCode": "33460",
+    "cbsaCode": "33460",
+    "zipCodes": [
+      "55401",
+      "55402",
+      "55403"
+    ],
+    "latitude": 44.9778,
+    "longitude": -93.265,
+    "blsAreaCode": "33460",
+    "county": "Hennepin"
+  },
+  {
+    "city": "Cleveland",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "metroArea": "Cleveland-Elyria",
+    "fipsCode": "17460",
+    "cbsaCode": "17460",
+    "zipCodes": [
+      "44101",
+      "44102",
+      "44103"
+    ],
+    "latitude": 41.4993,
+    "longitude": -81.6944,
+    "blsAreaCode": "17460",
+    "county": "Cuyahoga"
+  },
+  {
+    "city": "Kansas City",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "metroArea": "Kansas City",
+    "fipsCode": "28140",
+    "cbsaCode": "28140",
+    "zipCodes": [
+      "64101",
+      "64102",
+      "64105"
+    ],
+    "latitude": 39.0997,
+    "longitude": -94.5786,
+    "blsAreaCode": "28140",
+    "county": "Jackson"
+  },
+  {
+    "city": "Pittsburgh",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "metroArea": "Pittsburgh",
+    "fipsCode": "38300",
+    "cbsaCode": "38300",
+    "zipCodes": [
+      "15201",
+      "15206",
+      "15213"
+    ],
+    "latitude": 40.4406,
+    "longitude": -79.9959,
+    "blsAreaCode": "38300",
+    "county": "Allegheny"
+  },
+  {
+    "city": "Cincinnati",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "metroArea": "Cincinnati",
+    "fipsCode": "17140",
+    "cbsaCode": "17140",
+    "zipCodes": [
+      "45201",
+      "45202",
+      "45203"
+    ],
+    "latitude": 39.1031,
+    "longitude": -84.512,
+    "blsAreaCode": "17140",
+    "county": "Hamilton"
+  },
+  {
+    "city": "St. Louis",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "metroArea": "St. Louis",
+    "fipsCode": "41180",
+    "cbsaCode": "41180",
+    "zipCodes": [
+      "63101",
+      "63102",
+      "63103"
+    ],
+    "latitude": 38.627,
+    "longitude": -90.1994,
+    "blsAreaCode": "41180",
+    "county": "St. Louis City"
+  },
+  {
+    "city": "Sacramento",
+    "state": "California",
+    "stateAbbr": "CA",
+    "metroArea": "Sacramento-Roseville-Folsom",
+    "fipsCode": "40900",
+    "cbsaCode": "40900",
+    "zipCodes": [
+      "95814",
+      "95816",
+      "95818"
+    ],
+    "latitude": 38.5816,
+    "longitude": -121.4944,
+    "blsAreaCode": "40900",
+    "county": "Sacramento"
+  },
+  {
+    "city": "Salt Lake City",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "metroArea": "Salt Lake City",
+    "fipsCode": "41620",
+    "cbsaCode": "41620",
+    "zipCodes": [
+      "84101",
+      "84102",
+      "84103"
+    ],
+    "latitude": 40.7608,
+    "longitude": -111.891,
+    "blsAreaCode": "41620",
+    "county": "Salt Lake"
+  },
+  {
+    "city": "San Jose",
+    "state": "California",
+    "stateAbbr": "CA",
+    "metroArea": "San Jose-Sunnyvale-Santa Clara",
+    "fipsCode": "41940",
+    "cbsaCode": "41940",
+    "zipCodes": [
+      "95101",
+      "95110",
+      "95112"
+    ],
+    "latitude": 37.3382,
+    "longitude": -121.8863,
+    "blsAreaCode": "41940",
+    "county": "Santa Clara"
+  },
+  {
+    "city": "Boise",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "metroArea": "Boise City",
+    "fipsCode": "14260",
+    "cbsaCode": "14260",
+    "zipCodes": [
+      "83701",
+      "83702",
+      "83706"
+    ],
+    "latitude": 43.615,
+    "longitude": -116.2023,
+    "blsAreaCode": "14260",
+    "county": "Ada"
+  },
+  {
+    "city": "Richmond",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "metroArea": "Richmond",
+    "fipsCode": "40060",
+    "cbsaCode": "40060",
+    "zipCodes": [
+      "23219",
+      "23220",
+      "23221"
+    ],
+    "latitude": 37.5407,
+    "longitude": -77.436,
+    "blsAreaCode": "40060",
+    "county": "Richmond City"
+  },
+  {
+    "city": "Birmingham",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "metroArea": "Birmingham-Hoover",
+    "fipsCode": "13820",
+    "cbsaCode": "13820",
+    "zipCodes": [
+      "35201",
+      "35203",
+      "35205"
+    ],
+    "latitude": 33.5207,
+    "longitude": -86.8025,
+    "blsAreaCode": "13820",
+    "county": "Jefferson"
+  },
+  {
+    "city": "Knoxville",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "metroArea": "Knoxville",
+    "fipsCode": "28940",
+    "cbsaCode": "28940",
+    "zipCodes": [
+      "37901",
+      "37902",
+      "37916"
+    ],
+    "latitude": 35.9606,
+    "longitude": -83.9207,
+    "blsAreaCode": "28940",
+    "county": "Knox"
+  },
+  {
+    "city": "Savannah",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "metroArea": "Savannah",
+    "fipsCode": "42340",
+    "cbsaCode": "42340",
+    "zipCodes": [
+      "31401",
+      "31404",
+      "31405"
+    ],
+    "latitude": 32.0809,
+    "longitude": -81.0912,
+    "blsAreaCode": "42340",
+    "county": "Chatham"
+  },
+  {
+    "city": "Charleston",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "metroArea": "Charleston-North Charleston",
+    "fipsCode": "16700",
+    "cbsaCode": "16700",
+    "zipCodes": [
+      "29401",
+      "29403",
+      "29407"
+    ],
+    "latitude": 32.7765,
+    "longitude": -79.9311,
+    "blsAreaCode": "16700",
+    "county": "Charleston"
+  },
+  {
+    "city": "Greenville",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "metroArea": "Greenville-Anderson",
+    "fipsCode": "24860",
+    "cbsaCode": "24860",
+    "zipCodes": [
+      "29601",
+      "29605",
+      "29607"
+    ],
+    "latitude": 34.8526,
+    "longitude": -82.394,
+    "blsAreaCode": "24860",
+    "county": "Greenville"
+  },
+  {
+    "city": "Asheville",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "metroArea": "Asheville",
+    "fipsCode": "11700",
+    "cbsaCode": "11700",
+    "zipCodes": [
+      "28801",
+      "28803",
+      "28805"
+    ],
+    "latitude": 35.5951,
+    "longitude": -82.5515,
+    "blsAreaCode": "11700",
+    "county": "Buncombe"
+  },
+  {
+    "city": "Huntsville",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "metroArea": "Huntsville",
+    "fipsCode": "26620",
+    "cbsaCode": "26620",
+    "zipCodes": [
+      "35801",
+      "35802",
+      "35805"
+    ],
+    "latitude": 34.7304,
+    "longitude": -86.5861,
+    "blsAreaCode": "26620",
+    "county": "Madison"
+  },
+  {
+    "city": "Chattanooga",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "metroArea": "Chattanooga",
+    "fipsCode": "16860",
+    "cbsaCode": "16860",
+    "zipCodes": [
+      "37401",
+      "37402",
+      "37403"
+    ],
+    "latitude": 35.0456,
+    "longitude": -85.3097,
+    "blsAreaCode": "16860",
+    "county": "Hamilton"
+  },
+  {
+    "city": "Omaha",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "metroArea": "Omaha-Council Bluffs",
+    "fipsCode": "36540",
+    "cbsaCode": "36540",
+    "zipCodes": [
+      "68101",
+      "68102",
+      "68104"
+    ],
+    "latitude": 41.2565,
+    "longitude": -95.9345,
+    "blsAreaCode": "36540",
+    "county": "Douglas"
+  },
+  {
+    "city": "Colorado Springs",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "metroArea": "Colorado Springs",
+    "fipsCode": "17820",
+    "cbsaCode": "17820",
+    "zipCodes": [
+      "80901",
+      "80903",
+      "80904"
+    ],
+    "latitude": 38.8339,
+    "longitude": -104.8214,
+    "blsAreaCode": "17820",
+    "county": "El Paso"
+  },
+  {
+    "city": "Lexington",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "metroArea": "Lexington-Fayette",
+    "fipsCode": "30460",
+    "cbsaCode": "30460",
+    "zipCodes": [
+      "40502",
+      "40503",
+      "40507"
+    ],
+    "latitude": 38.0406,
+    "longitude": -84.5037,
+    "blsAreaCode": "30460",
+    "county": "Fayette"
+  },
+  {
+    "city": "Tulsa",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "metroArea": "Tulsa",
+    "fipsCode": "46140",
+    "cbsaCode": "46140",
+    "zipCodes": [
+      "74101",
+      "74103",
+      "74104"
+    ],
+    "latitude": 36.154,
+    "longitude": -95.9928,
+    "blsAreaCode": "46140",
+    "county": "Tulsa"
+  },
+  {
+    "city": "Spokane",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "metroArea": "Spokane-Spokane Valley",
+    "fipsCode": "44060",
+    "cbsaCode": "44060",
+    "zipCodes": [
+      "99201",
+      "99202",
+      "99203"
+    ],
+    "latitude": 47.6588,
+    "longitude": -117.426,
+    "blsAreaCode": "44060",
+    "county": "Spokane"
+  },
+  {
+    "city": "Detroit",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "metroArea": "Detroit-Warren-Dearborn",
+    "fipsCode": "19820",
+    "cbsaCode": "19820",
+    "zipCodes": [
+      "48201",
+      "48202",
+      "48204"
+    ],
+    "latitude": 42.3314,
+    "longitude": -83.0458,
+    "blsAreaCode": "19820",
+    "county": "Wayne"
+  },
+  {
+    "city": "Honolulu",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "metroArea": "Urban Honolulu",
+    "fipsCode": "46520",
+    "cbsaCode": "46520",
+    "zipCodes": [
+      "96813",
+      "96814",
+      "96815"
+    ],
+    "latitude": 21.3069,
+    "longitude": -157.8583,
+    "blsAreaCode": "46520",
+    "county": "Honolulu"
+  },
+  {
+    "city": "Fayetteville",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "metroArea": "Fayetteville-Springdale-Rogers",
+    "fipsCode": "22220",
+    "cbsaCode": "22220",
+    "zipCodes": [
+      "72701",
+      "72703",
+      "72704"
+    ],
+    "latitude": 36.0822,
+    "longitude": -94.1719,
+    "blsAreaCode": "22220",
+    "county": "Washington"
+  },
+  {
+    "city": "Wilmington",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "metroArea": "Wilmington",
+    "fipsCode": "48900",
+    "cbsaCode": "48900",
+    "zipCodes": [
+      "28401",
+      "28403",
+      "28405"
+    ],
+    "latitude": 34.2257,
+    "longitude": -77.9447,
+    "blsAreaCode": "48900",
+    "county": "New Hanover"
+  },
+  {
+    "city": "Fort Myers",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "metroArea": "Cape Coral-Fort Myers",
+    "fipsCode": "15980",
+    "cbsaCode": "15980",
+    "zipCodes": [
+      "33901",
+      "33907",
+      "33916"
+    ],
+    "latitude": 26.6406,
+    "longitude": -81.8723,
+    "blsAreaCode": "15980",
+    "county": "Lee"
+  },
+  {
+    "city": "Destin",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "metroArea": "Crestview-Fort Walton Beach-Destin",
+    "fipsCode": "18880",
+    "cbsaCode": "18880",
+    "zipCodes": [
+      "32541",
+      "32550"
+    ],
+    "latitude": 30.3935,
+    "longitude": -86.4958,
+    "blsAreaCode": "18880",
+    "county": "Okaloosa"
+  },
+  {
+    "city": "Gatlinburg",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "metroArea": "Sevierville",
+    "fipsCode": "42940",
+    "cbsaCode": "42940",
+    "zipCodes": [
+      "37738"
+    ],
+    "latitude": 35.7143,
+    "longitude": -83.5102,
+    "blsAreaCode": "42940",
+    "county": "Sevier"
+  },
+  {
+    "city": "Myrtle Beach",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "metroArea": "Myrtle Beach-Conway-North Myrtle Beach",
+    "fipsCode": "34820",
+    "cbsaCode": "34820",
+    "zipCodes": [
+      "29572",
+      "29577",
+      "29579"
+    ],
+    "latitude": 33.6891,
+    "longitude": -78.8867,
+    "blsAreaCode": "34820",
+    "county": "Horry"
+  },
+  {
+    "city": "Gulf Shores",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "metroArea": "Daphne-Fairhope-Foley",
+    "fipsCode": "19300",
+    "cbsaCode": "19300",
+    "zipCodes": [
+      "36542",
+      "36561"
+    ],
+    "latitude": 30.246,
+    "longitude": -87.7008,
+    "blsAreaCode": "19300",
+    "county": "Baldwin"
+  },
+  {
+    "city": "Pigeon Forge",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "metroArea": "Sevierville",
+    "fipsCode": "42940",
+    "cbsaCode": "42940",
+    "zipCodes": [
+      "37863",
+      "37862"
+    ],
+    "latitude": 35.7884,
+    "longitude": -83.5544,
+    "blsAreaCode": "42940",
+    "county": "Sevier"
+  },
+  {
+    "city": "Branson",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "metroArea": "Branson",
+    "fipsCode": "15380",
+    "cbsaCode": "15380",
+    "zipCodes": [
+      "65616",
+      "65615"
+    ],
+    "latitude": 36.6437,
+    "longitude": -93.2185,
+    "blsAreaCode": "15380",
+    "county": "Taney"
+  },
+  {
+    "city": "Kissimmee",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "metroArea": "Orlando-Kissimmee-Sanford",
+    "fipsCode": "36740",
+    "cbsaCode": "36740",
+    "zipCodes": [
+      "34741",
+      "34743",
+      "34744"
+    ],
+    "latitude": 28.292,
+    "longitude": -81.4076,
+    "blsAreaCode": "36740",
+    "county": "Osceola"
+  },
+  {
+    "city": "Panama City Beach",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "metroArea": "Panama City",
+    "fipsCode": "37460",
+    "cbsaCode": "37460",
+    "zipCodes": [
+      "32407",
+      "32408",
+      "32413"
+    ],
+    "latitude": 30.1766,
+    "longitude": -85.8055,
+    "blsAreaCode": "37460",
+    "county": "Bay"
+  },
+  {
+    "city": "Sedona",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "metroArea": "Prescott Valley-Prescott",
+    "fipsCode": "39140",
+    "cbsaCode": "39140",
+    "zipCodes": [
+      "86336",
+      "86339"
+    ],
+    "latitude": 34.8697,
+    "longitude": -111.761,
+    "blsAreaCode": "39140",
+    "county": "Yavapai"
+  },
+  {
+    "city": "Joshua Tree",
+    "state": "California",
+    "stateAbbr": "CA",
+    "metroArea": "Riverside-San Bernardino-Ontario",
+    "fipsCode": "40140",
+    "cbsaCode": "40140",
+    "zipCodes": [
+      "92252",
+      "92277"
+    ],
+    "latitude": 34.1347,
+    "longitude": -116.3131,
+    "blsAreaCode": "40140",
+    "county": "San Bernardino"
+  },
+  {
+    "city": "Big Bear Lake",
+    "state": "California",
+    "stateAbbr": "CA",
+    "metroArea": "Riverside-San Bernardino-Ontario",
+    "fipsCode": "40140",
+    "cbsaCode": "40140",
+    "zipCodes": [
+      "92315"
+    ],
+    "latitude": 34.2439,
+    "longitude": -116.9114,
+    "blsAreaCode": "40140",
+    "county": "San Bernardino"
+  },
+  {
+    "city": "Scottsdale",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "metroArea": "Phoenix-Mesa-Chandler",
+    "fipsCode": "38060",
+    "cbsaCode": "38060",
+    "zipCodes": [
+      "85250",
+      "85251",
+      "85254"
+    ],
+    "latitude": 33.4942,
+    "longitude": -111.9261,
+    "blsAreaCode": "38060",
+    "county": "Maricopa"
+  }
+]
