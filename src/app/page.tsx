@@ -17,6 +17,13 @@ export default function HomePage() {
     >
       <div className="mb-10">
         <SearchBar />
+        <p className="mt-3 text-sm text-muted-foreground">
+          Or{" "}
+          <a href="/discover" className="font-medium text-primary hover:underline">
+            discover markets for me
+          </a>{" "}
+          — describe your criteria and get a ranked shortlist.
+        </p>
       </div>
 
       {loading ? (

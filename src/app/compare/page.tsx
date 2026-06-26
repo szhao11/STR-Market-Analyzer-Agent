@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { MarketSnapshot } from "@/types/market";
-import { CompareRankResult } from "@/lib/agent/types";
 import { ComparisonTable } from "@/components/comparison-table";
 import { SearchBar } from "@/components/search-bar";
 import {
   InvestorProfileForm,
   useInvestorProfile,
 } from "@/components/investor-profile-form";
-import { CompareRankPanel } from "@/components/compare-rank-panel";
+import { useCompareRankPanel } from "@/components/compare-rank-panel-context";
+import { CompareRankTrigger } from "@/components/compare-rank-trigger";
 import { PageFrame } from "@/components/page-frame";
 import { Button } from "@/components/ui/button";
 import { Loader2, Sparkles } from "lucide-react";
@@ -19,10 +19,14 @@ export default function ComparePage() {
   const [loading, setLoading] = useState(true);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [profile, setProfile] = useInvestorProfile();
-  const [rankResult, setRankResult] = useState<CompareRankResult | null>(null);
-  const [rankLoading, setRankLoading] = useState(false);
-  const [rankError, setRankError] = useState<string | null>(null);
   const [agentUnavailable, setAgentUnavailable] = useState(false);
+  const {
+    startRankSession,
+    completeRankSession,
+    failRankSession,
+    clearSession,
+    loading: rankLoading,
+  } = useCompareRankPanel();
 
   useEffect(() => {
     fetch("/api/snapshots")
@@ -32,11 +36,22 @@ export default function ComparePage() {
       .finally(() => setLoading(false));
   }, []);
 
+  useEffect(() => {
+    const selectParam = new URLSearchParams(window.location.search).get("select");
+    if (!selectParam || snapshots.length === 0) return;
+    const ids = selectParam.split(",").filter(Boolean);
+    const valid = ids.filter((id) => snapshots.some((s) => s.id === id));
+    if (valid.length >= 2) {
+      setSelectedIds(new Set(valid.slice(0, 8)));
+    }
+  }, [snapshots]);
+
+  useEffect(() => () => clearSession(), [clearSession]);
+
   const rankSelected = async () => {
     if (selectedIds.size < 2) return;
 
-    setRankLoading(true);
-    setRankError(null);
+    startRankSession();
     setAgentUnavailable(false);
 
     try {
@@ -53,7 +68,7 @@ export default function ComparePage() {
 
       if (res.status === 503) {
         setAgentUnavailable(true);
-        setRankResult(null);
+        clearSession();
         return;
       }
 
@@ -61,12 +76,9 @@ export default function ComparePage() {
         throw new Error(data.error || "Failed to rank markets");
       }
 
-      setRankResult(data);
+      completeRankSession(data);
     } catch (err) {
-      setRankError(err instanceof Error ? err.message : "Failed to rank markets");
-      setRankResult(null);
-    } finally {
-      setRankLoading(false);
+      failRankSession(err instanceof Error ? err.message : "Failed to rank markets");
     }
   };
 
@@ -103,14 +115,11 @@ export default function ComparePage() {
             )}
             Rank selected ({selectedIds.size})
           </Button>
+          <CompareRankTrigger />
           {selectedIds.size > 0 && selectedIds.size < 2 && (
             <span className="text-xs text-muted-foreground">Select at least 2 markets</span>
           )}
         </div>
-
-        {(rankLoading || rankResult || rankError) && (
-          <CompareRankPanel result={rankResult} loading={rankLoading} error={rankError} />
-        )}
       </div>
 
       {loading ? (

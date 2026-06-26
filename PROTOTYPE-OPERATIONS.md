@@ -169,6 +169,18 @@ Structured record of resolved issues. **Append a new entry (increment `FIX-NNN`)
 | **Do not regress** | Explain failures must not clear the loaded brief; explain cache must require non-empty `explain` array |
 | **Verify** | `npm test`; load brief, click Explain my score — shows spinner then category breakdown; API error shows inline retry without losing brief |
 
+### FIX-010: Discovery parse fails — Zod `.optional()` on structured output
+
+| Field | Detail |
+|---|---|
+| **Date** | 2026-06-26 |
+| **Symptom** | Discover markets fails at parse step; OpenAI rejects schema: `properties/statesInclude` uses `.optional()` without `.nullable()` |
+| **Cause** | `discoveryCriteriaSchema` used `.optional()` on filter fields; OpenAI structured outputs require all properties in `required` (use `.nullable()` for unset filters) |
+| **Fix** | Replaced `.optional()` with `.nullable()` on all optional discovery criteria fields; prompt instructs model to return `null` for unset filters |
+| **Files** | `src/lib/agent/discovery/schemas.ts`, `types.ts`, `prompts.ts`, `filter-metros.ts`, `src/lib/__tests__/discovery.test.ts` |
+| **Do not regress** | Never use `.optional()` on Zod schemas passed to `zodResponseFormat`; use `.nullable()` for optional LLM fields (see FIX-008) |
+| **Verify** | `npm test`; `curl -X POST http://localhost:3000/api/agent/discover -H 'Content-Type: application/json' -d '{"query":"Texas markets under 400k"}'` returns ranked results |
+
 <!-- FIX-LOG:END -->
 
 ### Summary (quick reference)
@@ -252,6 +264,11 @@ Run before demoing or after pulling changes:
 | Investment Brief API/schema error | Agent Zod schema | OpenAI structured output rejects `.optional()` fields — brief uses `marketBriefSchema`; explain mode adds required `explain` array (see FIX-008) |
 | Explain my score does nothing | Agent cache / UI | Stale explain cache without `explain` array is auto-invalidated (FIX-009); click **Retry explanation** if inline error shows |
 | Compare & Rank returns 503 | `.env.local` | Same as above; comparison table still works |
+| Discover markets returns 503 | `.env.local` / schema | Set `OPENAI_API_KEY`; ensure `DISCOVERY_ENABLED` is not `false`. Schema errors from `.optional()` Zod fields — use `.nullable()` (FIX-010) |
+| Discovery returns no results | Strict criteria | Widen budget, occupancy, or state filters; discovery searches 73 metros with regulation pre-filter |
+| Discovery slow or times out | Hydrate cap | Default max 25 new metro fetches per run; cached snapshots are fast — analyze cities first or raise `DISCOVERY_MAX_HYDRATE` |
+| Production shows login loop | Vercel env | Set `SITE_PASSWORD` on Production; redeploy after env changes |
+| API returns 401 in production | Site gate | Sign in at `/login` first, or pass auth cookie with curl |
 | Brief stale after Re-fetch Data | Agent cache | Brief auto-invalidates when snapshot `fetchedAt` is newer; or click **Regenerate** |
 
 ### Verify STR API manually
@@ -315,6 +332,59 @@ When moving beyond local prototype:
 2. Run Apify as a background job (queue/webhook) instead of blocking HTTP.
 3. Store STR cache in DB, not in-memory `cache.ts` (same worker issue).
 4. Set `maxDuration` on Vercel Pro for `/api/analyze/str` if deploying serverless.
+
+---
+
+## Deploy to Vercel (Hobby + shared password)
+
+> **Live deployment details:** see [DEPLOYMENT.md](./DEPLOYMENT.md) (production URL, Vercel project, verify steps).
+
+The app ships with an optional **site gate** — no Vercel Pro password add-on required.
+
+### 1. Environment variables
+
+Set in Vercel → Project → Settings → Environment Variables (Production + Preview):
+
+| Variable | Required | Notes |
+|---|---|---|
+| `SITE_PASSWORD` | **Yes** (production) | Shared password visitors enter at `/login` |
+| `SITE_AUTH_SECRET` | Recommended | Long random string for cookie signing; falls back to `SITE_PASSWORD` if empty |
+| `APIFY_API_TOKEN` | For STR tab | Same as local |
+| `OPENAI_API_KEY` | For Market Brief | Optional |
+| Other keys | Optional | Copy from `.env.example` |
+
+Leave `SITE_PASSWORD` **empty locally** for open access during development.
+
+### 2. Deploy
+
+```bash
+cd market-analyzer
+npm run build
+npx vercel          # preview
+npx vercel --prod   # production URL
+```
+
+Set **Root Directory** to `market-analyzer` if importing from the monorepo GitHub repo.
+
+### 3. Verify the gate
+
+1. Open the production URL — you should land on `/login`.
+2. Enter `SITE_PASSWORD` — redirects to home.
+3. `curl https://your-app.vercel.app/api/analyze?city=Austin&state=TX` without a cookie → `401 Unauthorized`.
+
+### 4. Hobby limitations
+
+- **Snapshots / agent cache** use `.data/` on disk — ephemeral on serverless; users may need to re-analyze after cold starts.
+- **STR fetch** (`maxDuration = 300`) may hit Hobby’s function timeout (~10s). Government data and UI still work; STR may fail or time out without Vercel Pro.
+
+### Files
+
+| File | Role |
+|---|---|
+| `src/middleware.ts` | Redirects unauthenticated users to `/login`; blocks API with 401 |
+| `src/lib/site-auth.ts` | Password check + signed cookie token |
+| `src/app/login/page.tsx` | Shared-password sign-in |
+| `src/app/api/auth/login/route.ts` | Sets httpOnly auth cookie |
 
 ---
 

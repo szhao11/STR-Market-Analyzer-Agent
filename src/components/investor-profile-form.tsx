@@ -6,36 +6,65 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp, SlidersHorizontal } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const STORAGE_KEY = "ma-investor-profile";
+const DISCOVER_PROFILE_ENABLED_KEY = "ma-discover-use-profile";
 
 export function InvestorProfileForm({
   profile,
   onChange,
+  enabled,
+  onEnabledChange,
 }: {
   profile: InvestorProfile;
   onChange: (profile: InvestorProfile) => void;
+  enabled?: boolean;
+  onEnabledChange?: (enabled: boolean) => void;
 }) {
   const [open, setOpen] = useState(true);
+  const profileEnabled = enabled ?? true;
 
   return (
-    <Card>
+    <Card className={!profileEnabled ? "opacity-60" : undefined}>
       <CardHeader className="pb-3">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-3">
           <CardTitle className="text-base flex items-center gap-2">
             <SlidersHorizontal className="h-4 w-4 text-muted-foreground" />
             Investor Profile
           </CardTitle>
-          <Button variant="ghost" size="sm" onClick={() => setOpen((v) => !v)}>
-            {open ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-          </Button>
+          <div className="flex items-center gap-2">
+            {onEnabledChange && (
+              <label className="flex items-center gap-2 text-xs text-muted-foreground cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={profileEnabled}
+                  onChange={(e) => onEnabledChange(e.target.checked)}
+                  className="rounded border"
+                />
+                Apply to discovery
+              </label>
+            )}
+            <Button variant="ghost" size="sm" onClick={() => setOpen((v) => !v)}>
+              {open ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+            </Button>
+          </div>
         </div>
         <p className="text-xs text-muted-foreground">
-          Used for compare & rank — saved locally in your browser.
+          {onEnabledChange
+            ? profileEnabled
+              ? "Budget, absentee, and cash-flow defaults shape discovery results alongside your query."
+              : "Off — discovery uses only what you type in the query."
+            : "Used for compare, rank, and discover — saved locally in your browser."}
         </p>
       </CardHeader>
       {open && (
-        <CardContent className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <CardContent
+          className={cn(
+            "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4",
+            !profileEnabled && "pointer-events-none"
+          )}
+        >
           <Field
             label="Max purchase price"
             type="number"
@@ -161,4 +190,30 @@ export function useInvestorProfile(): [InvestorProfile, (p: InvestorProfile) => 
   };
 
   return [profile, update];
+}
+
+export function useDiscoverProfileEnabled(): [boolean, (enabled: boolean) => void] {
+  const [enabled, setEnabled] = useState(true);
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(DISCOVER_PROFILE_ENABLED_KEY);
+      if (raw != null) {
+        setEnabled(raw === "true");
+      }
+    } catch {
+      // ignore
+    }
+  }, []);
+
+  const update = (next: boolean) => {
+    setEnabled(next);
+    try {
+      localStorage.setItem(DISCOVER_PROFILE_ENABLED_KEY, String(next));
+    } catch {
+      // ignore
+    }
+  };
+
+  return [enabled, update];
 }

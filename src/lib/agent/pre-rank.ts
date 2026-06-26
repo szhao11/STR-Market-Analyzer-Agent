@@ -76,22 +76,32 @@ function buildKeyMetric(snapshot: MarketSnapshot): string {
 
 export function preRankMarkets(
   snapshots: MarketSnapshot[],
-  profile: InvestorProfile = DEFAULT_INVESTOR_PROFILE
+  profile: InvestorProfile = DEFAULT_INVESTOR_PROFILE,
+  options?: { useInvestorProfile?: boolean }
 ): { eligible: PreRankEntry[]; disqualified: PreRankEntry[] } {
+  const useInvestorProfile = options?.useInvestorProfile ?? true;
+
   const entries: PreRankEntry[] = snapshots.map((snapshot) => {
     const facts = buildMarketContext(snapshot, profile);
     const hasStr = Boolean(snapshot.strAdr && snapshot.strAdr > 0);
     const calc = runInvestmentScenario(snapshot, profile, hasStr ? "str" : "ltr");
-    const disqualifyReason = getDisqualifyReason(snapshot, profile);
+    const disqualifyReason = useInvestorProfile
+      ? getDisqualifyReason(snapshot, profile)
+      : undefined;
     const disqualified = Boolean(disqualifyReason);
 
     const compositeScore = disqualified
       ? 0
-      : normalizeScore(snapshot.overallScore) * 0.25 +
-        revparSignalScore(snapshot.strRevpar) * 0.25 +
-        cashOnCashSignalScore(calc.cashOnCash) * 0.25 +
-        seasonalitySignalScore(snapshot.strSeasonalityScore) * 0.1 +
-        affordabilitySignalScore(snapshot.housingAffordabilityIndex) * 0.15;
+      : useInvestorProfile
+        ? normalizeScore(snapshot.overallScore) * 0.25 +
+          revparSignalScore(snapshot.strRevpar) * 0.25 +
+          cashOnCashSignalScore(calc.cashOnCash) * 0.25 +
+          seasonalitySignalScore(snapshot.strSeasonalityScore) * 0.1 +
+          affordabilitySignalScore(snapshot.housingAffordabilityIndex) * 0.15
+        : normalizeScore(snapshot.overallScore) * 0.35 +
+          revparSignalScore(snapshot.strRevpar) * 0.35 +
+          seasonalitySignalScore(snapshot.strSeasonalityScore) * 0.15 +
+          affordabilitySignalScore(snapshot.housingAffordabilityIndex) * 0.15;
 
     return {
       snapshotId: snapshot.id || `${snapshot.identifiers.city}-${snapshot.identifiers.stateAbbr}`,

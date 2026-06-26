@@ -83,13 +83,22 @@ function checkEnv(env) {
     pass(`OPENAI_API_KEY set (${env.OPENAI_API_KEY.length} chars)`);
     pass(`OpenAI model: ${env.OPENAI_MODEL || "gpt-4o-mini (default)"}`);
   } else {
-    warn("OPENAI_API_KEY empty — Market Brief and Compare & Rank will show setup message");
+    warn("OPENAI_API_KEY empty — Market Brief, Compare & Rank, and Discovery will show setup message");
   }
 
   if (env.AGENT_ENABLED === "false") {
     warn("AGENT_ENABLED=false — agent API routes return 503");
   } else {
     pass("AI agent enabled (AGENT_ENABLED not false)");
+  }
+
+  if (env.DISCOVERY_ENABLED === "false") {
+    warn("DISCOVERY_ENABLED=false — /api/agent/discover returns 503");
+  } else if (env.AGENT_ENABLED !== "false") {
+    pass("Market discovery enabled (DISCOVERY_ENABLED not false)");
+    pass(
+      `Discovery limits: STR fetch max ${env.DISCOVERY_STR_FETCH_MAX || "5"}, hydrate max ${env.DISCOVERY_MAX_HYDRATE || "25"}`
+    );
   }
 
   const strAutoFetch = env.NEXT_PUBLIC_APIFY_STR_AUTO_FETCH === "true";
@@ -99,6 +108,19 @@ function checkEnv(env) {
     );
   } else {
     pass("STR on-demand mode (NEXT_PUBLIC_APIFY_STR_AUTO_FETCH not true — Apify only when user clicks Load STR Data)");
+  }
+
+  if (env.SITE_PASSWORD) {
+    pass("SITE_PASSWORD set — site gate enabled (middleware + /login)");
+    if (!env.SITE_AUTH_SECRET) {
+      warn(
+        "SITE_AUTH_SECRET empty — cookie signing falls back to SITE_PASSWORD; set a long random secret for production"
+      );
+    } else {
+      pass("SITE_AUTH_SECRET set");
+    }
+  } else {
+    pass("SITE_PASSWORD empty — site gate disabled (open access)");
   }
 }
 

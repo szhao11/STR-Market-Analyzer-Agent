@@ -7,6 +7,10 @@ import { cn } from "@/lib/utils";
 import { useRecentSnapshots } from "@/hooks/use-recent-snapshots";
 import { BriefPanelProvider } from "@/components/brief-panel-context";
 import { BriefSidePanel } from "@/components/brief-side-panel";
+import { CompareRankPanelProvider } from "@/components/compare-rank-panel-context";
+import { CompareRankSidePanel } from "@/components/compare-rank-side-panel";
+import { DiscoveryPanelProvider } from "@/components/discovery-panel-context";
+import { DiscoverySidePanel } from "@/components/discovery-side-panel";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import {
@@ -19,6 +23,7 @@ import {
   Search,
   LayoutGrid,
   FileText,
+  Sparkles,
   X,
   PanelLeftClose,
   PanelLeft,
@@ -28,6 +33,7 @@ const SIDEBAR_COLLAPSED_KEY = "str-analyzer-sidebar-collapsed";
 
 const navLinks = [
   { href: "/", label: "Search", icon: Search, exact: true },
+  { href: "/discover", label: "Discover", icon: Sparkles, exact: false },
   { href: "/compare", label: "Compare", icon: LayoutGrid, exact: false },
 ];
 
@@ -112,7 +118,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <BriefPanelProvider>
-      <div className="flex h-screen overflow-hidden bg-background">
+      <CompareRankPanelProvider>
+        <DiscoveryPanelProvider>
+        <div className="flex h-screen overflow-hidden bg-background">
         <aside
           className={cn(
             "flex shrink-0 flex-col border-r border-sidebar-border bg-sidebar transition-[width] duration-200 ease-out",
@@ -216,8 +224,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <div className="flex min-w-0 flex-1 overflow-hidden">
           <main className="min-w-0 flex-1 overflow-y-auto">{children}</main>
           <BriefSidePanel />
+          <CompareRankSidePanel />
+          <DiscoverySidePanel />
         </div>
       </div>
+        </DiscoveryPanelProvider>
+      </CompareRankPanelProvider>
     </BriefPanelProvider>
   );
 }
