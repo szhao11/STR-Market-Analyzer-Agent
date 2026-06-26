@@ -29,7 +29,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-**Before each session:** run `npm run doctor` to verify API keys, storage, and Apify status. See [PROTOTYPE-OPERATIONS.md](./PROTOTYPE-OPERATIONS.md) for troubleshooting and the **Fix Log** (all resolved issues are captured there per [plan.md §14](../plan.md#14-issue-resolution--fix-capture-protocol)). **Production:** [DEPLOYMENT.md](./DEPLOYMENT.md).
+**Before each session:** run `npm run doctor` to verify API keys, storage, and Apify status. See [PROTOTYPE-OPERATIONS.md](./PROTOTYPE-OPERATIONS.md) for troubleshooting and the **Fix Log** (all resolved issues are captured there per [plan.md §14](./plan.md#14-issue-resolution--fix-capture-protocol)). **Production:** [DEPLOYMENT.md](./DEPLOYMENT.md).
 
 ## API Keys (Optional)
 
