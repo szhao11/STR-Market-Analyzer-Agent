@@ -2,7 +2,7 @@
 
 Live deployment record and runbook for the STR Market Analyzer on **Vercel Hobby** with a shared-password site gate.
 
-**Related:** [plan.md §17](../plan.md#17-production-deployment) · [PROTOTYPE-OPERATIONS.md](./PROTOTYPE-OPERATIONS.md) · [README.md](./README.md)
+**Related:** [plan.md §17](./plan.md#17-production-deployment) · [PROTOTYPE-OPERATIONS.md](./PROTOTYPE-OPERATIONS.md) · [README.md](./README.md)
 
 ---
 

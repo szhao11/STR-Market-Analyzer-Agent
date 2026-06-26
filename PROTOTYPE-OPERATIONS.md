@@ -2,9 +2,9 @@
 
 Runbook for running the STR Market Analyzer locally without hitting the data-loading issues discovered during prototype testing (June 2026).
 
-**Related docs:** [README.md](./README.md) · [plan.md §14 Fix Capture Protocol](../plan.md#14-issue-resolution--fix-capture-protocol)
+**Related docs:** [README.md](./README.md) · [plan.md §14 Fix Capture Protocol](./plan.md#14-issue-resolution--fix-capture-protocol)
 
-> **Maintainers & agents:** When you resolve any bug in this prototype, append a new `FIX-NNN` entry to the [Fix Log](#fix-log) below before finishing the task. See [plan.md §14](../plan.md#14-issue-resolution--fix-capture-protocol) for the template and checklist.
+> **Maintainers & agents:** When you resolve any bug in this prototype, append a new `FIX-NNN` entry to the [Fix Log](#fix-log) below before finishing the task. See [plan.md §14](./plan.md#14-issue-resolution--fix-capture-protocol) for the template and checklist.
 
 ---
 
@@ -391,7 +391,7 @@ Set **Root Directory** to `market-analyzer` if importing from the monorepo GitHu
 ## Adding new fixes
 
 1. Read the next ID from the last `FIX-NNN` entry in the [Fix Log](#fix-log) above.
-2. Copy the template from [plan.md §14](../plan.md#14-issue-resolution--fix-capture-protocol).
+2. Copy the template from [plan.md §14](./plan.md#14-issue-resolution--fix-capture-protocol).
 3. Append between `<!-- FIX-LOG:START -->` and `<!-- FIX-LOG:END -->`.
 4. Update the [Troubleshooting](#troubleshooting) table if users might hit this again.
 5. Run `npm run doctor` and note verification steps in the entry.
